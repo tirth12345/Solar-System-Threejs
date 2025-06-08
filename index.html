@@ -1,61 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Space Explorer</title>
     <!-- icon -->
     <link rel="icon" href="Images/Space_icon.png" type="image/png" />
-    <title>Getting Started with Three.js</title>
-    <style>
-      body {
-        margin: 0;
-      }
-    </style>
-    <script type="importmap">
-			{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
-          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
-        }
-			}
-		</script>
-        <script type="module" src="index.js"></script>
-  </head>
-  <body>
-    <!-- Slider to get the speed of particular planets revolving speed in sldier -->
-     <div style="position:fixed;top:10px;left:10px;z-index:10;background:#222;padding:10px;color:#fff;">
-  <label>Mercury Speed: <input id="mercurySpeed" type="range" min="0" max="0.02" step="0.0001" value="0.005"></label><br>
-  <label>Venus Speed: <input id="venusSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.003"></label><br>
-  <label>Earth Speed: <input id="earthSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.002"></label><br>
-  <label>Mars Speed: <input id="marsSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.001"></label><br>
-  <label>Jupiter Speed: <input id="jupiterSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.0002"></label><br>
-  <label>Saturn Speed: <input id="saturnSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.0003"></label><br>
-  <label>Uranus Speed: <input id="uranusSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.0002"></label><br>
-  <label>Neptune Speed: <input id="neptuneSpeed" type="range" min="0" max="0.02" step="0.0001" value="0.0001"></label><br>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="welcome-container">
+        <h1 class="welcome-text">Welcome to the Solar System Explorer</h1>
+        <p class="welcome-subtext">Embark on an interactive journey through our cosmic neighborhood</p>
+        <button class="enter-button" onclick="window.location.href='Solar.html'">Enter Solar System</button>
+    </div>
+
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars'); // Container for stars
+        const starCount = 200; // Number of stars to create
  
-</div>
-<div id="cameraPositionDisplay" style="position:fixed;top:10px;right:10px;z-index:10;background:#222;padding:10px;color:#fff;">
-  Camera Position:
-</div>
-
-<!-- pause/Play button -->
-<div style="position:fixed;bottom:10px;left:10px;z-index:10;background:#fff;padding:10px;color:#fff;margin-bottom: 10px;">
-
-  <button id="pausePlayBtn" style="border: none;background-color: transparent;color: #222;">Pause</button>
-</div>
-<!-- Add this inside <body> -->
-<div id="planetInfo" style="
-  position: fixed;
-  top: 250px;
-  left: 10px;
-  width: 220px;
-  background: #222;
-  color: #fff;
-  padding: 20px;
-  display: none;
-  z-index: 10;
-  font-family: sans-serif;
-"></div>
-
+        for (let i = 0; i < starCount; i++) { 
+            const star = document.createElement('div'); 
+            star.className = 'star'; 
+            
+            // Random position
+            star.style.left = `${Math.random() * 100}%`; 
+            star.style.top = `${Math.random() * 100}%`;
+            
+            // Random size
+            const size = Math.random() * 3; 
+            star.style.width = `${size}px`; 
+            star.style.height = `${size}px`;
+            
+            // Random animation
+            star.style.setProperty('--duration', `${2 + Math.random() * 3}s`);
+            star.style.setProperty('--opacity', `${0.5 + Math.random() * 0.5}`);
+            
+            // Random delay
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
-</html>
+</html> 
