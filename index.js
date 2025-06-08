@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'jsm/controls/OrbitControls.js';
-import getstarField from './starbackground.js';
+import getstarField from './StarBackground.js';
 
 
 // mandatory: create a camera
