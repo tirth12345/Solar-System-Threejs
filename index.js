@@ -81,8 +81,6 @@ scene.add(neptuneGroup);
 
 
 
-
-
 //create a group for the sun
 const sunGroup = new THREE.Group();
 sunGroup.rotation.x = -23.4*Math.PI / 180;
@@ -496,7 +494,7 @@ scene.add(neptunePivot);
 
 
 
-function createOrbitLine(radius, color = 0xffffff) {
+function createOrbitLine(radius, color = 0xffffff) { 
     const segments = 128;
     const geometry = new THREE.BufferGeometry();
     const positions = [];
@@ -511,7 +509,7 @@ function createOrbitLine(radius, color = 0xffffff) {
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
     const material = new THREE.LineBasicMaterial({ color });
     return new THREE.Line(geometry, material);
-}
+} 
 
 const mercuryOrbit = createOrbitLine(100, 0xffffff);
 const venusOrbit = createOrbitLine(120, 0xffffff);

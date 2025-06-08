@@ -1,8 +1,13 @@
+# Project Subject Line:  Frontend Assignment - Tirth Chokshi
+
+
+
 # Three.js Solar System Visualization
 
 This project is an interactive 3D solar system visualization built using Three.js. It features a realistic representation of our solar system with planets, stars, and interactive controls.
 
-[Live Demo](https://solar-system-threejs-beta.vercel.app)
+
+[Live Demo](https://solar-system-threejs-lovm.vercel.app/)
 
 ## Features
 
@@ -91,7 +96,6 @@ This project is open source and available under the MIT License.
 ## Acknowledgments
 
 - Three.js community for the amazing 3D library
-- NASA for planet textures and data
 - [Vercel](https://vercel.com) for hosting the live demo
 
 ## Author
