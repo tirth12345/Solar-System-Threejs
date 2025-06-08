@@ -67,7 +67,6 @@ After starting the server, open your web browser and navigate to:
 - **Left Mouse Button + Drag**: Rotate the camera
 - **Right Mouse Button + Drag**: Pan the camera
 - **Mouse Wheel**: Zoom in/out
-- **Space**: Toggle auto-rotation
 
 ## Technologies Used
 
