@@ -7,6 +7,15 @@
     <!-- icon -->
     <link rel="icon" href="Images/Space_icon.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        @media (max-width: 600px) {
+    #cameraPositionDisplay {
+        font-size: 12px;   /* Or use a smaller value as needed */
+        opacity: 0.5;      /* Or set to 0 to hide completely */
+        /* Optionally: display: none; */
+    }
+    }
+</style>
 </head>
 <body>
     <div class="stars" id="stars"></div>
@@ -15,7 +24,7 @@
         <p class="welcome-subtext">Embark on an interactive journey through our cosmic neighborhood</p>
         <button class="enter-button" onclick="window.location.href='solar.html'">Enter Solar System</button>
     </div>
-
+    
     <script src="starbackground.js"></script>
 </body>
 </html> 

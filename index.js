@@ -638,6 +638,8 @@ const planetData = [
   { mesh: neptuneMesh, name: "Neptune", info: "Neptune: Farthest planet. Diameter: 49,244 km." }
 ];
 
+
+
 // animation
 function animate(t=0) {
     if (isPaused) return; // Stop animation if paused
@@ -708,3 +710,5 @@ document.addEventListener('pointerdown', (event) => {
         planetInfo.style.display = 'none';
     }
 });
+
+
